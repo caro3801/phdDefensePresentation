@@ -1,0 +1,38 @@
+\begin{tikzpicture}
+[every label/.append style={text=brown, font=\scriptsize,opacity=0.7},
+ ttt/.style={font=\scriptsize}
+]
+		
+		
+		% The last trick is to cheat and use transparency
+		\begin{scope}
+		%	\fill[red] \firstcircle;
+		%	\fill[green] \secondcircle;
+		%	\fill[blue] \thirdcircle;
+		\draw \firstcircle node[above left , text=brown, xshift=0.5cm] 
+		{\textbf{Conception 3D web}};
+		\draw \secondcircle node [above right, align=center] {
+			\textbf{Architecture de }\\
+			\textbf{communication}
+		};
+		\draw \thirdcircle node [below, align=center] {\textbf{Traçabilité et}\\\textbf{historique des données}};
+		\end{scope}
+		
+		
+	\node[ttt,brown,align=center] at (2,0.3)  {\textbf{Technos web}\\(intérop.)};
+		\node[ttt,brown] at (0.7,-1.5)  {\textbf{Structure données}};
+	
+		\node[ttt,label={[label distance=-0.2cm]90:Surfaces implicites}] at (-1,-0.4) 
+		{\cite{Grasberger2013}};
+		\node[ttt,label={[label distance=-0.2cm]90:OnShape}] at (-1.5,-1.1) 
+		{\cite{Baran2015}};
+		\node[ttt,label={[label distance=-0.2cm]90:ChainVoxel}] at (-0.5,0.9) 
+		{\cite{Imae2016}};
+		
+		\node[ttt,label={[label distance=-0.2cm]90:3DRepo.io}] at (0,1.5) 
+		{\cite{Scully2015}};
+		
+	
+
+		
+\end{tikzpicture}

@@ -1,0 +1,84 @@
+%!TEX root = presentation.tex
+\section{Conclusion}
+\subsection{Rappel des contributions}
+\begin{frame}{Résumé}
+
+	\begin{textblock*}{95mm}(3.5cm,0.2\textheight)
+	\centering \large
+	\textbf{ {\color{Purple}Comment engager toutes les ressources \\ à 
+			disposition 
+			lors de la collaboration  sur le web?}}
+\end{textblock*}
+
+\vspace*{0.5cm}
+\begin{minipage}{0.5\textwidth}
+	\begin{itemize}		
+		\item Architecture hybride : chaque pair participe à la distribution et au 
+		stockage en temps réel et de manière égalitaire.
+		\item Modèle événementiel : taxonomie et traçabilité des manipulations. 
+		L'expertise des utilisateurs est sauvée et réutilisable.
+
+	\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+	\vspace*{0.5cm}
+	\centering
+\inputTikZ{0.7}{img/tikz/approche12.tex}
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}{Questions de recherche}
+\begin{table}
+	\begin{tabular}{lcc}
+		\hline
+		\textbf{QR}              & \textbf{Approche orientée états} & \textbf{Approche 
+			orientée événements} \\ \hline
+		\textbf{QR1 Réseau}      &\tickpartial                         &  
+		\tick                         \\
+		\textbf{QR2 Traçabilité} &     \fail                & \tick                                  \\
+		\textbf{QR3 Autonomie}   & \tickpartial                           & \tick                 \\
+		\textbf{QR4 Validité}    &         \fail                         &\tick                      \\
+		\textbf{QR5 Métriques}  &  \tickpartial (quali.) \fail  (quant.) & \tick (quali.)  
+		\tickpartial  (quant.)       \\ \hline
+	\end{tabular}
+\end{table}
+
+\end{frame}
+
+\subsection{Perspectives}
+\begin{frame}{Usages potentiels}
+	La conception d'un modèle événementiel à travers l'implémentation d'une 
+	plateforme 
+	comme 3DEvent peut servir d'autres applications 
+	asynchrones, distribuées et orientées événements.
+	\begin{itemize}
+		\item Application au \textbf{versionnage 3D collaboratif }avancé.
+		\item \textbf{Création de scénarios} artificiels ou sur la base de traces 
+		utilisateurs 
+		intégrant le métier (jeux sérieux).
+		\item \textbf{Traçage utilisateur et \textit{crowdsouring}} pour repérer des 
+		zones d'intérêt ou proposer des résumés d'activité.
+		\item Concevoir des \textbf{audits et  des outils de surveillance} pour les 
+		données 
+		3D issues de la collaboration.
+		
+	\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Perspectives}
+	Comparaison quantitative des deux approches (mêmes 
+	interface/scénario/réseau)
+	
+	Virtualisation des comportements collaboratifs \cite{Haque2016}\cite{Erb2014}
+	
+	Gestion des conflits (super n\oe uds)
+	\cite{Klamer2013a} % Conflict resolution event sourcing 
+	\cite{Baldoni2007}
+	
+	
+	Compression 3D \cite{Maglo2013a} (avec événements) 
+\end{frame}

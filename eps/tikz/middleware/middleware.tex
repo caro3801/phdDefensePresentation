@@ -1,0 +1,56 @@
+\begin{tikzpicture}[
+	node distance=11mm,
+	minimum height=10mm,
+	rectangle,
+	draw=black,
+	text centered,
+	desc/.style={
+		fill=bleue!40
+	},
+	it/.style={
+		fill=bleue!20
+	},center/.style={
+		text width=6.5cm
+	}, centerleft/.style={
+	text width=3.8cm
+	},centerright/.style={
+		text width=2.3cm
+	}, left/.style={
+		text width=3cm
+	}, right/.style={
+	text width=2cm
+	}, base/.style={
+		text width=12.3cm
+	}
+	]
+	
+	
+
+	\node [desc,base,it] (App) {Web browser};
+	
+	\node [desc, left,above =1mm of App, xshift=-46.5mm] (Capability) 
+	{Capability and Configuration};	
+	\node [desc, left,above =1mm of Capability] (Role) {Peer Role Selection};
+	
+	\node [desc,center, above = 1mm of App,xshift=5mm] (NAT) {NAT/Firewall 
+	Traversal};
+	
+	\node [desc,centerleft, it, above = 1mm of NAT, xshift=-13.5mm] (Core) 
+	{Key-Based Routing\\ Neighbor Directory\\ Join/Leave \\Bootstrap};
+	\node [desc,centerleft, it, above =1 mm of Core] (Overlay) 
+	{Overlay \\Messaging API};
+	
+	\node [desc,centerright,above = 1mm of NAT, xshift=21mm,
+	minimum height=34.4mm] (Session) {Session \\Management};
+	
+	
+	\node [desc,right,above =1mm of App,minimum height=45.6mm, 
+	xshift=51.5mm] 
+	(Content) 
+	{Content Storage};
+	
+	\node [desc, it, above =1mm of Overlay, xshift=37.5mm,minimum 
+	width=6.8cm] 
+	(P2P) {P2P API};
+	
+	\end{tikzpicture}

@@ -1,0 +1,46 @@
+%\documentclass[]{standalone}
+%\usepackage{tikz}
+%\usetikzlibrary{matrix,positioning,arrows.meta,arrows,calc}
+
+
+\tikzset{
+	cell/.style={rectangle,draw=black,font=\itshape},
+	cell2/.style={rectangle,draw=bleue!40},
+	space/.style={
+		matrix of nodes,
+		row sep=-\pgflinewidth,column sep=10\pgflinewidth,
+		column 1/.style={font=\ttfamily}
+	},
+every node/.style={anchor=base,minimum width=5em,minimum height=2em}
+}
+%\begin{document}
+
+\begin{tikzpicture}
+	\matrix (first) [space,
+	 column 1/.style={font=\ttfamily,minimum width=3em},
+	column 2/.style={nodes={cell}},
+	column 3/.style={nodes={cell}},
+	column 4/.style={nodes={cell}},
+	column 5/.style={nodes={cell}},
+	column 6/.style={nodes={cell}},
+	column 7/.style={nodes={cell}},
+	row 7/.style={nodes={ font=\bfseries,draw=none, fill=none ,minimum 
+	height=7mm}},
+	text depth=0.5ex]
+	{
+\textit{n}&	     &      &	ei	&      &		&	&\\
+	5		&		&		&	ei	&		&		&	ei	\\
+	4		&		&	ei	&	ei	&		&		&	ei	\\
+	3		&		&	ei	&	ei	&	ei	&		&	ei	\\
+	2		&	ei	&	ei	&	ei	&	ei	&		&	ei	\\
+	1		&	ei	&	ei	&	ei	&	ei	&	ei	&	ei	\\
+version	 &	ag1	&ag2  & ag3 & ag4 &ag5 &	ag6	\\
+	};
+
+\draw (-5.8,-0.5) rectangle (7.8,7) ;
+
+\node[] at (-4.5,6.3) {\textit{Event Store}};
+
+\end{tikzpicture}
+
+%\end{document}

@@ -1,0 +1,43 @@
+	\begin{tikzpicture}
+		[every label/.append style={text=Purple, font=\scriptsize,opacity=0.7},
+	ttt/.style={font=\scriptsize}
+	]
+	
+	% The last trick is to cheat and use transparency
+	\begin{scope}
+	%	\fill[red] \firstcircle;
+	%	\fill[green] \secondcircle;
+	%	\fill[blue] \thirdcircle;
+	\draw \firstcircle node[above left , text=brown, xshift=0.5cm] 
+	{\textbf{Conception 3D web}};
+	\draw \secondcircle node [above right, align=center,text=Purple] {
+		\textbf{Architecture de }\\
+		\textbf{communication}
+	};
+	\draw \thirdcircle node [below, align=center] {\textbf{Traçabilité et}\\\textbf{historique des données}};
+	\end{scope}
+	
+	\node[ttt,brown,align=center] at (2,0.3)  {\textbf{Technos web}\\(intérop.)};
+	\node[ttt,brown] at (0.7,-1.5)  {\textbf{\tiny Structure données}};
+	
+	
+	\node[ttt,Purple] at (2,-0.1)  {\textbf{Robustesse}};
+	\node[ttt,Purple] at (3.9,-1.8)  {\textbf{Résilience}};
+	\node[ttt,Purple] at (3.4,-1.5)  {\textbf{Passage à l'échelle}};
+	
+\node[ttt,label={[label distance=-0.2cm]90:P2P Indoor WebVR}] at (3.8,1.3) 
+	{\cite{Hu2017}};
+%		\node[ttt,label={[label distance=-0.2cm]90:Mobile data transfer}] at (0,-1) 
+%{\cite{Stephenson2015}};
+%\node[ttt,label={[label distance=-0.2cm]90:Yjs}] at (0,-1) 
+%{\cite{Nicolaescu2015}};
+\node[ttt,label={[label distance=-0.2cm]90:WebRTCbench}] at (5.4,1) 
+{\cite{Taheri2015}};
+
+
+\node[ttt,label={[label distance=-0.2cm]90:RADE}] at (4,-0.5) 
+{\cite{Koskela2015}};
+
+\node[ttt,label={[label distance=-0.2cm]90:Arch. hybride pour BIM}] at (5.3,-1) 
+{\cite{Chen2014}};
+	\end{tikzpicture}

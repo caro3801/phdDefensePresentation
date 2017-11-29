@@ -1,0 +1,47 @@
+%\documentclass[]{standalone}
+%\usepackage{tikz}
+%\usetikzlibrary{matrix,positioning,arrows.meta,arrows,calc}
+
+
+\tikzset{
+	cell/.style={rectangle,draw=black,font=\bfseries\itshape},
+	cell2/.style={rectangle,draw=bleue!40},
+	space/.style={
+		matrix of nodes,
+		row sep=-\pgflinewidth,column sep=10\pgflinewidth,
+		column 1/.style={font=\ttfamily}
+	},
+every node/.style={anchor=base,minimum width=5em,minimum height=2em}
+}
+%\begin{document}
+
+\begin{tikzpicture}
+	\matrix (first) [space,
+	 column 1/.style={font=\ttfamily,minimum width=3em},
+	column 2/.style={nodes={cell}},
+	column 3/.style={nodes={cell2}},
+	column 4/.style={nodes={cell2}},
+	column 5/.style={nodes={cell2}},
+	column 6/.style={nodes={cell2}},
+	column 7/.style={nodes={cell2}},
+	row 7/.style={nodes={ draw=none, fill=none}},
+	text depth=1.8ex]
+	{
+		\textit{n} &          ei &                   &  $ei_{rotate}$     &	                   &	&\\
+		5&          ei &                   &  $ei_{scale}$   &    	             &	& $ei_{leave}$\\
+		4& ei & $ei_{remove}$  &  $ei_{trans}$ &&& $ei_{join}$\\
+		3&          ei & $ei_{scale}$   &  $ei_{scale}$   & $ei_{delete}$       &		& 
+		$ei_{chColor}$\\
+		2&          ei & $ei_{trans}$ &  $ei_{rotate}$   & $ei_{rename}$ & 	        & 
+		$ei_{chName}$\\
+		1&       ei & $ei_{add}$   &  $ei_{drop}$  & $ei_{create}$ & $ei_{create}$& 
+		$ei_{create}$\\
+		version& aggregate& m1              &              m2 &s1                   &g1&u1 \\
+	};
+
+\draw (-3.3,-0.2) rectangle (7.9,6.5) ;
+
+\node[] at (2.3,6) {\textit{Event Store}};
+\end{tikzpicture}
+
+%\end{document}

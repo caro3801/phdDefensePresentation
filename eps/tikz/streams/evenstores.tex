@@ -1,0 +1,69 @@
+%\documentclass[tikz,border=2mm]{standalone}
+%\usetikzlibrary{matrix,backgrounds,positioning,}
+%
+%\begin{document}
+	\begin{tikzpicture}[
+	font=\ttfamily,
+	array/.style={matrix of nodes,nodes={draw, minimum size=7mm, 
+	fill=gray!30},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells,
+		row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}},
+		}]
+%	array/.style={matrix of nodes,nodes={draw, font=\ttfamily\scriptsize,minimum 
+%	size=7mm, 
+%	fill=gray!30},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty 
+%cells}]
+	
+%	\matrix[array] (array) {
+%		0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+%		0 & 1 & 2 & 3\\
+%		0 & 1 & 2 & 3 & 4 & 5 & 6\\
+%		0 & 1 & 2 & 3 & 4 \\};
+%	
+%		\matrix[array, below =of array] (array2) {
+%			0 & 1 & 2 & 3 & 4 & 5 & 6 & 7\\
+%			0 & 1 & 2 & 3\\
+%			0 & 1 & 2 & 3 & 4 & 5 & 6\\
+%			0 & 1 & 2 & 3 & 4 \\};
+%	
+%%		\matrix[array, below =of array2] (array3) {
+%%			0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
+%%			0 & 1 & 2 & 3\\
+%%			0 & 1 & 2 & 3 & 4 & 5 & 6\\
+%%			0 & 1 & 2 & 3 & 4 \\};
+%	
+%	\draw (-2.9,-1.7) rectangle (4,1.7) ;
+%	\draw (-2.9,-6) rectangle (4,-2.5) ;
+%%	\draw (-2.9,-10.3) rectangle (4,-6.7) ;
+%	
+%	\node[] at (2.7,-1.4) {\textit{Event Store A}};
+%	\node[] at (2.7,-5.7) {\textit{Event Store B}};
+%%	\node[] at (2.7,-10) {\textit{Event Store C}};
+
+\matrix[array] (array) {
+	0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9\\
+	&   &   &   &   &   &   &   &   &  \\
+	&   &   &   &   &    \\
+	&   &   &   &   &   &   \\
+	&   &     \\
+	&   &   &   &   &     \\};
+\node[draw, fill=gray, minimum size=4mm] at (array-2-9) (box) {};
+
+\begin{scope}[on background layer]
+\fill[gray!10] (array-1-1.north west) rectangle (array-1-10.south east);
+\end{scope}
+
+
+\draw (array-1-10.east)--++(0:3mm) node [right]{Agregate version};
+\draw (array-2-10.east)--++(0:3mm) node (AV) [right]{Agregate};
+%\draw (array-3-6.east)--++(AV);
+%\draw (array-4-7.east)--++(AV);
+%\draw (array-5-3.east)--++(AV);
+%\draw (array-6-6.east)--++(AV);
+\node [align=center, anchor=south] at (array-2-9.north east|-array-3-6.south east) 
+(8) 
+{Event (at index 8)};
+\draw (8)--(box);
+	
+	%
+	\end{tikzpicture}
+%\end{document}

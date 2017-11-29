@@ -1,3 +1,11 @@
-*/**.aux
-*/**.bbl
-
+**.aux
+**.bbl
+**.aux
+**.log
+**.nav
+**.out
+**.snm
+**.blg
+**eps-converted-to.pdf
+**synctex.gz
+**.toc

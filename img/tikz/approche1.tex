@@ -1,0 +1,22 @@
+	\begin{tikzpicture}
+	
+	
+	% The last trick is to cheat and use transparency
+	\begin{scope}
+	%	\fill[red] \firstcircle;
+	%	\fill[green] \secondcircle;
+	%	\fill[blue] \thirdcircle;		
+	\draw \firstcircle node[above left , text=brown, xshift=0.5cm] 
+	{\textbf{Conception 3D web}};
+	\draw \secondcircle node [above right, align=center,text=Purple] {
+		\textbf{Architecture de }\\
+		\textbf{communication}
+	};
+	\draw \thirdcircle node [below, align=center,text=Orange] {\textbf{Traçabilité et}\\\textbf{historique des données}};
+
+\draw[gray!20,fill=mDarkTeal] (2.5,0.8) circle (0.6) node {$AO_{Etats}$} ;
+\draw[fill=gray!20, opacity=0.5] (2,-1) circle (0.6) node {$AO_{Events}$} ;
+	\end{scope}
+		
+	
+	\end{tikzpicture}

@@ -1,0 +1,49 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage{xcolor}
+\definecolor{Purple}{HTML}{911146}
+\definecolor{Orange}{HTML}{CF4A30}
+\include{tikzspecs}
+\usetikzlibrary{positioning}
+\newcommand{\inputTikZ}[2]{%  
+	\scalebox{#1}{\input{#2}}  
+} 
+
+\def\firstcircle{(0:0) ellipse (3cm and 2cm)}
+\def\secondcircle{(0:4cm) ellipse (3cm and 2cm)}
+\def\thirdcircle{(310:3.2cm) ellipse (3cm and 2cm)}
+\centering
+\footnotesize
+\begin{document}
+%\begin{figure}
+%	\centering
+%	\inputTikZ{1}{conception3D.tex}
+%	\caption{my-caption}
+%	\label{my-label}
+%\end{figure}
+%\begin{figure}
+%\centering
+%\inputTikZ{1}{archcomm.tex}
+%\caption{my-caption}
+%\label{my-label}
+%%\end{figure}
+%\begin{figure}
+%\centering
+%\inputTikZ{1}{tracabilite.tex}
+%\caption{my-caption}
+%\label{my-label}
+%\end{figure}
+
+\begin{figure}
+	\centering
+	\inputTikZ{1}{allwithpics.tex}
+	\caption{my-caption}
+	\label{my-label}
+\end{figure}
+
+
+\bibliography{../../mendeley}
+\bibliographystyle{alpha-fr}
+\end{document}

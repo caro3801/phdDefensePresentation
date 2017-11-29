@@ -1,0 +1,66 @@
+	\begin{tikzpicture}
+	[every label/.append style={text=Orange, font=\scriptsize,opacity=0.7},
+	ttt/.style={font=\scriptsize}
+	]
+	
+	% The last trick is to cheat and use transparency
+	\begin{scope}
+	%	\fill[red] \firstcircle;
+	%	\fill[green] \secondcircle;
+	%	\fill[blue] \thirdcircle;
+\draw \firstcircle node[above left , text=brown, xshift=0.5cm] 
+{\textbf{Conception 3D web}};
+	\draw \secondcircle node [above right, align=center,text=Purple] {
+		\textbf{Architecture de }\\
+		\textbf{communication}
+	};
+	\draw \thirdcircle node [below, align=center,text=Orange] {\textbf{Traçabilité 
+	et}\\\textbf{historique des données}};
+	\end{scope}
+	
+	\node[ttt,brown,align=center] at (2,0.3)  {\textbf{Technos web}\\(intérop.)};
+	\node[ttt,brown] at (0.7,-1.5)  {\textbf{\tiny Structure données}};
+	
+	
+	\node[ttt,Purple] at (2,-0.1)  {\textbf{Robustesse}};
+	\node[ttt,Purple] at (3.9,-1.8)  {\textbf{Résilience}};
+	\node[ttt,Purple] at (3.4,-1.5)  {\textbf{Passage à l'échelle}};
+	
+	\node[ttt,Orange] at (3.4,-1.25)  {\textbf{Couplage lâche}};
+	\node[ttt,Orange] at (0,-1.8)  {\textbf{Expertise}};
+	\node[ttt,Purple] at (3.4,-1.5)  {\textbf{Passage à l'échelle}};
+	
+	
+	\node[ttt,label={[label distance=-0.2cm]90:Analysis of Collab. Design}] at 
+	(1.6,-3.8) 
+	{\cite{Bang2017}};
+
+\node[ttt,label={[label distance=-0.2cm]90:Event sourcing}] at (2,-4.3) 
+{\cite{Fowler2005EventSourcing}};
+\node[ttt,label={[label distance=-0.2cm]90:CQRS}] at (4.2,-2.5) 
+{\cite{Young2009}};
+\node[ttt,label={[label distance=-0.2cm]90:DDD}] at (0.6,-1.3) 
+{\cite{Evans2003,Vernon2013}};
+
+
+\node[ttt,label={[label distance=-0.2cm]90:Event-based visu.}] at (0.3,-2.5) 
+{\cite{Doktor-ingenieur2006}};
+
+
+%\node[ttt,label={[label distance=-0.2cm]90:Event-based app.}] at (0,-1) 
+%{\cite{Hinze2009}};
+%
+%\node[ttt,label={[label distance=-0.2cm]90:Distributed arch. for EDA}] at (0,-1) 
+%{\cite{Cristea2011}};
+%
+%	\node[ttt,label={[label distance=-0.2cm]90:P2P collab infrastructures}] at (0,-1) 
+%{\cite{Hauswirth2005}};
+%	
+%	\node[ttt,label={[label distance=-0.2cm]90:Knowledge repr. in product design}] 
+%	at (0,-1) 
+%{\cite{Chandrasegaran2013}};
+	
+
+	
+
+	\end{tikzpicture}

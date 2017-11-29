@@ -1,0 +1,48 @@
+\begin{tikzpicture}[
+    auto, thick,
+	node distance=25mm,
+	minimum height=30mm,
+	align = center,
+	text centered,
+	pub/.style={
+		thick,
+		draw=black,
+		rectangle,
+		fill=bleue!20
+	},
+	sub/.style={
+		thick, 
+		draw=black,
+		fill=rouge!20
+	},
+	event/.style={
+		thick, 
+		draw=black,
+		fill=vert!20
+	},
+	message/.style={
+		node distance=5mm,
+		minimum height=0mm,
+		above,
+		font=\itshape\footnotesize
+	}
+	]
+	
+	
+	\node[pub](Pub){{\rotatebox{90}{Publisher}}} ;
+	\node[event,right= of Pub](Event){Event\\ Notification \\Service} ;
+	\node[sub,right= of Event](Subs){{\rotatebox{90}{Subscribers}}} ;
+	
+	\draw[-latex] (Pub.east) --  node[message] {publish(e)} 
+	(Event.west);
+	
+	
+	\draw[-latex] ($(Subs.north west)-(0,0.5)$) -- node[message] 
+	{subscribe(e)}  
+	 ($(Event.north east)-(0,0.5)$) ;
+	
+	\draw[-latex] (Subs) --  node[message] {unsubscribe(e)} 
+	(Event);
+	\draw[-latex] ($(Event.south east)-(0,-0.5)$) --  node[message] {notify(e)} 
+	($(Subs.south west)-(0,-0.5)$) ;
+\end{tikzpicture}

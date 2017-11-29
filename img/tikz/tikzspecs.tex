@@ -1,0 +1,78 @@
+\usepackage{tikz}
+
+
+\usetikzlibrary{trees,patterns,matrix,arrows,backgrounds}
+%\tikzstyle{every node}=[draw=black,thick,anchor=west]
+\tikzstyle{everynode}=[draw=black,thick,anchor=west]
+\tikzstyle{selected}=[draw=red,fill=red!30]
+\tikzstyle{optional}=[dashed,fill=gray!50]
+
+
+
+
+
+\usepackage{pgfplots}
+   \usepgfplotslibrary{dateplot}
+ \pgfplotsset{width=7cm,compat=1.3}
+ \usepackage{pgfplotstable}
+   \pgfplotstableset{col sep=comma}
+
+\usetikzlibrary{arrows,arrows.meta,chains,calc,trees,positioning}
+\definecolor{lavander}{cmyk}{0,0.48,0,0}
+\definecolor{violet}{cmyk}{0.79,0.88,0,0}
+\definecolor{burntorange}{cmyk}{0,0.52,1,0}
+\definecolor{lightblue}{cmyk}{0.85,0.5,0,0}
+
+\def\firstcircle{(0:0) ellipse (3cm and 2cm)}
+\def\secondcircle{(0:4cm) ellipse (3cm and 2cm)}
+\def\thirdcircle{(310:3.2cm) ellipse (3cm and 2cm)}
+\def\lav{Purple!20}
+\def\oran{gray!30}
+
+\tikzstyle{peers}=[draw,circle,Purple,fill=\lav,minimum width=7pt]
+
+\tikzstyle{superpeers}=[draw,circle,burntorange, fill=\oran,minimum width=17pt]
+
+\tikzstyle{servers}=[draw,circle,blue,  fill=lightblue!30,
+text=black,minimum width=25pt]
+
+\tikzstyle{legendsp}=[rectangle, draw, burntorange,
+thin,fill=\oran!30,
+text=black, minimum width=1.5cm]
+
+\tikzstyle{legendp}=[rectangle, draw, violet,  thin,
+fill =\lav, 
+text= black, minimum width= 1.5cm]
+
+\tikzstyle{legends}=[rectangle, draw, violet,  thin,
+fill=lightblue!30,
+text= black, minimum width= 1.5cm]
+
+\tikzstyle{legend_general}=[rectangle, 
+minimum width=1.5cm, minimum height=0.8cm]
+
+
+
+\definecolor{bleue}{RGB}{128,128,128}
+%\definecolor{bleue}{RGB}{66,200,244}
+\definecolor{rouge}{rgb}{0.96,0.23,0.37}
+\definecolor{vert}{RGB}{255,218,153}
+\tikzset{%
+	>={Latex[width=2mm,length=2mm]},
+	% Specifications for style of nodes:
+	base/.style = {rectangle, rounded corners, draw=black,  text centered,text 
+	opacity=1},
+	rejected/.style = { text=rouge},
+	end/.style = {base, fill=vert!20},
+	process/.style = {base, minimum width=5.5cm},
+	event/.style = {base,minimum height=1.7cm},
+	eventn/.style = {base,minimum height=1.7cm,fill=vert!20},
+	eventc/.style = {base,minimum height=1.7cm, fill=rouge!20}
+}
+
+
+\usepackage{xcolor}
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}

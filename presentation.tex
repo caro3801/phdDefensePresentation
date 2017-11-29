@@ -1,0 +1,117 @@
+\documentclass[aspectratio=169,10pt, compress,usenames,dvipsnames]{beamer}
+\usetheme[progressbar=foot]{metropolis}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage{graphicx}
+\graphicspath{{./img}}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,backgrounds}
+\definecolor{Purple}{HTML}{911146}
+\definecolor{Orange}{HTML}{CF4A30}
+
+\usepackage{bbding}
+\setbeamercolor{alerted text}{fg=Purple}
+\setbeamercolor{frame footer}{fg=gray!70}
+\setbeamercolor{frametitle}{bg=Purple}
+
+\setbeamercolor{section in head/foot}{fg=Purple, bg=black!2}
+\setbeamercolor{subsection in head/foot}{fg=white, bg=Purple!90}
+\setbeamercolor{frametitle}{fg=Purple,bg=black!2}
+\useoutertheme[subsection=true]{miniframes}
+\setbeamercolor*{block title example}{fg=Purple,
+	bg= black!2}
+\setbeamercolor*{block body example}{fg= mDarkTeal,
+	bg= black!2}
+\newcommand*\tick{\textcolor{ForestGreen}{\CheckmarkBold}}
+\newcommand*\tickpartial{\textcolor{Dandelion}{\CheckmarkBold}}
+\newcommand*\tickalmost{\textcolor{YellowGreen}{\CheckmarkBold}}
+\newcommand*\fail{\textcolor{Red}{\XSolidBold}}
+
+\setbeamercovered{transparent}
+\usepackage[absolute,overlay]{textpos}
+\setbeamerfont{frametitle}{size=\normalsize}
+\usepackage{multirow}
+\usepackage{ltxtable}
+\AtBeginSection{}
+\newenvironment{variableblock}[2][\textwidth]{%
+	\setlength{\textwidth}{#1}
+	\setbeamercolor{block body}{bg=Purple,fg=white}
+	\setbeamercolor{block title}{bg=Purple,fg=white}
+	\begin{block}{#2}}{\end{block}}
+
+\newenvironment{questionblock}[2]{%
+	\setlength{\textwidth}{#1}
+	\setbeamercolor{block body}{}
+	\setbeamercolor{block title}{fg=Purple}
+	\begin{exampleblock}{#2}}{\end{exampleblock}}
+
+
+
+\include{img/tikz/tikzspecs}
+
+\newcommand{\inputTikZ}[2]{%  
+	\scalebox{#1}{\input{#2}}  
+} 
+
+\newcommand{\animpdf}[2]{\includegraphics<#1>[width=0.9\columnwidth,page=#1]{#2}}
+
+\newcommand{\separatingline}[1]{\noindent\rule{#1}{0.4pt}}
+\setbeamertemplate{frame footer}{{\scriptsize Architecture événementielle pour les 
+EVCs 3D sur le web -- Soutenance de thèse de Caroline 
+Desprat - 01/12/2017}}
+
+
+\title{Architecture événementielle pour les environnements virtuels 
+collaboratifs sur le web : Application à la manipulation et à la visualisation 
+d'objets 3D}
+\date{Vendredi 1er décembre 2017}
+\author{Soutenance de thèse de Caroline DESPRAT}
+\institute{IRIT - Université de Toulouse}
+
+
+\begin{document}
+	\maketitle
+
+\include{intro}
+
+\include{aoe}
+
+
+\begin{frame}{De l'état aux événements}
+	Des besoins en attente :
+		\begin{itemize}
+		\item Transmission par différentiel d'état : léger mais perte de l'historique des 
+		manipulations (\textit{active record}).
+		\item Passage à l'échelle compromis (réseau totalement maillé)
+		\item Apporter plus de flexibilité à la collaboration (expertise, analyse)
+	\end{itemize}
+	
+	Changement de paradigme : 
+	\begin{itemize}
+		\item Description sémantique des manipulations : introduction des 
+		spécificités 
+		métiers de la 3D (historisation facilitée).
+		\item Améliorer le passage à l'échelle en réduisant la densité du maillage.
+		\item Validation des modifications pour conserver l'intégrité du système.
+	
+	\end{itemize}
+
+\end{frame}
+
+
+\include{aoev}
+
+
+
+\include{conclu}
+\section{}
+\begin{frame}[plain,allowframebreaks,noframenumbering]{References}
+\tiny
+\bibliography{mendeley}
+\bibliographystyle{alpha-fr}
+
+\end{frame}
+
+\end{document}

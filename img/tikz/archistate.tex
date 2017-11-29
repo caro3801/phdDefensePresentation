@@ -1,0 +1,52 @@
+\begin{tikzpicture}[auto, thick,
+ database/.style={
+	cylinder,
+	cylinder uses custom fill,
+	cylinder body fill=white!50,
+	cylinder end fill=white!50,
+	shape border rotate=90,
+	aspect=0.25,
+	draw
+}]
+
+% Legends
+\node[legendp] at (-3.5,2) {\small{Pair}};
+\node[legends] at (-3.5,1.3) {\small{Serveur}};
+\draw [blue] (-3.5,0.2) -- (-3,0.2) node[right] {\footnotesize \par
+	WebSocket : \textit{signaling} et sync long-terme};
+\draw [style=dashed,Purple] (-3.5,0.6) -- (-3,0.6) node[right] {\footnotesize 
+	WebRTC 
+	: sync court-terme};
+\draw [->,style=dotted,red,ultra thick,opacity=0] (-3.5,-0.2) -- (-3,-0.2) node[right] 
+{\small 
+	Diffusion du 
+	message émis par E};
+%\def \n {3}
+%\def \radius {1.8}
+%\draw circle(\radius)[draw=white]
+%foreach\s in{1,...,\n}{
+%	(-360/\n*\s:-\radius)
+%	node[peers,anchor=-360/\n*\s] (e\s){}
+%};
+\draw (0,4) node[servers] (s){s};
+
+\node[database] (db1) at (1.5,4) {BD};
+\draw[] (s) -- (db1);
+\draw (-2,2.3) node[peers] (e1){};
+\draw (2,2.3) node[peers] (e2){};
+\draw (0,1.3) node[peers] (e3){};
+
+\draw [style=densely dotted,gray](2.2,3.5) arc (-78:-105:10) node[below 
+left]{\small Collaboration} node[above left] {\small Persistance};
+
+
+\draw[color=blue] (s) -- (e1);
+\draw[color=blue] (s) -- (e2);
+\draw [color=blue](s) -- (e3);
+
+	\draw[style=dashed,color=Purple] (e1) -- (e2);
+	\draw[style=dashed,color=Purple]  (e1) -- (e3);
+	\draw[style=dashed,color=Purple]  (e2) -- (e3);
+	
+	
+\end{tikzpicture}
